@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542942143 source:c:\users\chacal\desktop\menu com função contar vogais\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

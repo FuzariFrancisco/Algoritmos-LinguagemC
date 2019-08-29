@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542292254 source:c:\users\chacal\desktop\struct media\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

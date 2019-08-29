@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1539192606 source:c:\users\0040481822025\desktop\prova resolução\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

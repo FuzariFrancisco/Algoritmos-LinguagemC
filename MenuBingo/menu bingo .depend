@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1541202648 source:c:\users\chacal\desktop\menu bingo chico\main.c
+	<stdio.h>
+	<stdlib.h>
+

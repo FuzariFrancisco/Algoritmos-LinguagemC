@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1542781433 source:c:\users\chacal\desktop\menu switch com operações em matriz\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
