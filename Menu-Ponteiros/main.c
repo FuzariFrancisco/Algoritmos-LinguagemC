@@ -9,7 +9,7 @@ typedef struct no{
     struct no * next;
 }no;
 
- struct no *ptr, *A, *I;
+ struct no *ptr, *A, *I, *conferir;
 
 int main()
 {
@@ -19,13 +19,13 @@ int main()
     ptr = NULL;
     A = NULL;    
         
-        
     while(opcao != 3)
 	{
 		system("cls");
 		printf("1 - Cadastrar\n");
 		printf("2 - Exibir\n");
-		printf("3 - Sair\n");
+		printf("3 - Pesquisar por nome\n");
+		printf("4 - Sair\n");
 		printf("SELECIONE UMA OPÇÃO: "); scanf("%d", &opcao);
 	
 	
@@ -33,9 +33,9 @@ int main()
 		{
 			case 1:
 			{
-				system("cls");
+				
 				printf("Digite a quantidade de pessoas que deseja cadastrar: "); scanf("%d", &pessoas);
-				system("cls");
+				
 				for(i=0; i<pessoas; i++)
 				{
 		            printf("\tCadastro de num %d\n",i+1);
@@ -48,20 +48,19 @@ int main()
 		            }else{
 		                ptr = (no*)malloc(sizeof(no));
 		                printf("informe o codigo. . . "); scanf("%d", &ptr ->codigo);
-		                printf("informe o nome. . . "); scanf("%s", & ptr->nome);
+		                printf("informe o nome. . . "); scanf("%s", &ptr->nome);
 		
 		                A->next = ptr;
 		                ptr->next =NULL;
 		                A=ptr;
 		             }
-		        }
-		    	system("cls");	
+		        }	
 				break;
 			}
 			
 			case 2:
 			{
-				system("cls");
+				
 				ptr = I;
 		    	do{
 			        printf("\n\nCodigo %d\t", ptr->codigo);
@@ -72,7 +71,26 @@ int main()
 				break;
 			}
 			
-			case 3:{
+			case 3:
+			{
+				ptr = I;
+				conferir =(no*) malloc(sizeof(no));
+				printf("Digite o nome a ser pesquisado: "); scanf("%s", &conferir->nome);
+				
+		    	do{		
+					if(strcmp(ptr->nome,conferir->nome) == 0)
+					{					
+					    printf("\n\nCodigo %d\t", ptr->codigo);
+					    printf("Nome %s", ptr->nome);
+					}
+					ptr=ptr->next;
+		    	}while(ptr!=NULL);
+		    	
+				break;
+			}
+			
+			case 4:{
+				
 				default:
 				break;
 			}
